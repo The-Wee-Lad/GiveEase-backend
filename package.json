@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "start": "node ./src/index.js",
-    "dev": "cross-env nodemon"
+    "dev": "nodemon"
   },
   "author": "",
   "contributors": [
