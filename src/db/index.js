@@ -1,12 +1,12 @@
 import mongoose from "mongoose";
 
-const clusterUri = process.env.PORT;
+
 const dbName = "giveease";
-console.log(clusterUri,dbName,process.env.PORT);
 
 const connectDB = async () => {
     try {
-        const connectionInstance = await mongoose.connect(clusterUri, {
+        console.log(dbName,process.env.PORT);
+        const connectionInstance = await mongoose.connect(process.env.MONGO_URI, {
             dbName: dbName,
         });
         console.log("Connection established. Connection Host : ", connectionInstance.connection.host);
